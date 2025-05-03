@@ -4,8 +4,17 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import Typewriter from "react-ts-typewriter";
 
-export default function Title() {
+interface TitleProps {
+  onFinished: () => void;
+}
+
+export default function Title({ onFinished }: TitleProps) {
   const [finished, setFinished] = useState(false);
+
+  const handleFinish = () => {
+    setFinished(true);
+    onFinished();
+  };
 
   return (
     <motion.h1
@@ -28,7 +37,7 @@ export default function Title() {
         text="Quotavel"
         speed={300}
         cursor={false}
-        onFinished={() => setFinished(true)}
+        onFinished={handleFinish}
       />
     </motion.h1>
   );
