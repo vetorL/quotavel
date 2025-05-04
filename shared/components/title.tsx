@@ -20,18 +20,14 @@ export default function Title({ onFinished }: TitleProps) {
     <motion.h1
       className="text-9xl font-bold italic absolute"
       initial={{ top: "50%", left: "50%", x: "-50%", y: "-50%", scale: 1 }}
-      animate={
-        finished
-          ? {
-              top: "2rem",
-              left: "50%",
-              x: "-50%",
-              y: 0,
-              scale: 0.6,
-              transition: { duration: 1, ease: "easeInOut" },
-            }
-          : {}
-      }
+      animate={{
+        top: finished ? "2rem" : "50%",
+        left: "50%",
+        x: "-50%",
+        y: finished ? 0 : "-50%",
+        scale: finished ? 0.6 : 1,
+      }}
+      transition={{ duration: 1, ease: "easeInOut" }}
     >
       <Typewriter
         text="Quotavel"

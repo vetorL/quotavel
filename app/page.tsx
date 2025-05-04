@@ -9,10 +9,14 @@ export default function Home() {
   const [titleFinished, setTitleFinished] = useState(false);
 
   return (
-    <div className="relative min-h-screen bg-white">
-      <Title onFinished={() => setTitleFinished(true)} />
+    <div className="min-h-screen bg-white overflow-x-hidden">
+      <div>
+        <Title onFinished={() => setTitleFinished(true)} />
+      </div>
+
       <SearchBar visible={titleFinished} />
-      <div className="mt-16">
+
+      <div className="mt-16 px-4 pb-16">
         <QuoteCardList visible={titleFinished} />
       </div>
     </div>

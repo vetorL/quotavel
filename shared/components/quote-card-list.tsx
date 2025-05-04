@@ -16,6 +16,56 @@ const placeholderQuotes = [
     quote: "Invisible threads are the strongest ties.",
     author: "Friedrich Nietzsche",
   },
+  {
+    quote:
+      "To live is to suffer, to survive is to find some meaning in the suffering.",
+    author: "Friedrich Nietzsche",
+  },
+  {
+    quote: "There are no facts, only interpretations.",
+    author: "Friedrich Nietzsche",
+  },
+  {
+    quote:
+      "No one can construct for you the bridge upon which precisely you must cross the stream of life.",
+    author: "Friedrich Nietzsche",
+  },
+  {
+    quote:
+      "The man of knowledge must be able not only to love his enemies but also to hate his friends.",
+    author: "Friedrich Nietzsche",
+  },
+  {
+    quote: "The snake which cannot cast its skin has to die.",
+    author: "Friedrich Nietzsche",
+  },
+  {
+    quote:
+      "In individuals, insanity is rare; but in groups, parties, nations and epochs, it is the rule.",
+    author: "Friedrich Nietzsche",
+  },
+  {
+    quote: "You must have chaos within you to give birth to a dancing star.",
+    author: "Friedrich Nietzsche",
+  },
+  {
+    quote:
+      "Whoever fights monsters should see to it that in the process he does not become a monster.",
+    author: "Friedrich Nietzsche",
+  },
+  {
+    quote:
+      "Sometimes people don’t want to hear the truth because they don’t want their illusions destroyed.",
+    author: "Friedrich Nietzsche",
+  },
+  {
+    quote: "Is man merely a mistake of God’s? Or God merely a mistake of man?",
+    author: "Friedrich Nietzsche",
+  },
+  {
+    quote: "Become who you are!",
+    author: "Friedrich Nietzsche",
+  },
 ];
 
 const containerVariants = {
