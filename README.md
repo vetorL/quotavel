@@ -1,5 +1,7 @@
 # Quotavel
 
+Aplicação Web para compartilhamento e visualização de citações.
+
 Projeto realizado para a disciplina de _Banco de Dados II_.
 
 ## Integrantes do grupo
