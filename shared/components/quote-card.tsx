@@ -1,12 +1,15 @@
-export default function QuoteCard() {
+export default function QuoteCard({
+  quote,
+  author,
+}: {
+  quote: string;
+  author: string;
+}) {
   return (
-    <div className="max-w-md mx-auto p-6 bg-white rounded-2xl shadow-md border border-gray-200">
-      <p className="text-lg italic text-gray-700">
-        “This is a placeholder quote that will eventually be replaced with
-        something meaningful.”
-      </p>
+    <div className="p-6 bg-white rounded-2xl shadow-md border border-gray-200">
+      <p className="text-lg italic text-gray-700">“{quote}”</p>
       <div className="mt-4 text-right">
-        <span className="text-sm text-gray-500">— Placeholder Author</span>
+        <span className="text-sm text-gray-500">— {author}</span>
       </div>
     </div>
   );
