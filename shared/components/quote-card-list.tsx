@@ -1,9 +1,7 @@
 "use client";
 
-import { fetchQuotes } from "@/shared/api/fetch-quotes";
-import { Quote } from "@/shared/types/quote";
+import { useQuotes } from "@/shared/hooks/useQuotes";
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react";
 import QuoteCard from "./quote-card";
 
 const containerVariants = {
@@ -22,25 +20,7 @@ const itemVariants = {
 };
 
 export default function QuoteCardList({ visible }: { visible: boolean }) {
-  const [quotes, setQuotes] = useState<Quote[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    if (!visible) return;
-
-    const loadQuotes = async () => {
-      try {
-        const data = await fetchQuotes();
-        setQuotes(data);
-      } catch (error) {
-        console.error(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    loadQuotes();
-  }, [visible]);
+  const { quotes, loading } = useQuotes(visible);
 
   return (
     <AnimatePresence>
