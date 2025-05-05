@@ -7,6 +7,7 @@ import { useState } from "react";
 
 export default function Home() {
   const [titleFinished, setTitleFinished] = useState(false);
+  const [search, setSearch] = useState("");
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
@@ -14,10 +15,10 @@ export default function Home() {
         <Title onFinished={() => setTitleFinished(true)} />
       </div>
 
-      <SearchBar visible={titleFinished} />
+      <SearchBar visible={titleFinished} value={search} onChange={setSearch} />
 
       <div className="mt-16 px-4 pb-16">
-        <QuoteCardList visible={titleFinished} />
+        <QuoteCardList visible={titleFinished} search={search} />
       </div>
     </div>
   );

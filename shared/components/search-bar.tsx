@@ -5,9 +5,15 @@ import { motion } from "framer-motion";
 
 interface SearchBarProps {
   visible: boolean;
+  value: string;
+  onChange: (value: string) => void;
 }
 
-export default function SearchBar({ visible }: SearchBarProps) {
+export default function SearchBar({
+  visible,
+  value,
+  onChange,
+}: SearchBarProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: "100vh" }}
@@ -35,6 +41,8 @@ export default function SearchBar({ visible }: SearchBarProps) {
           type="text"
           id="search"
           placeholder="Search quotes..."
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
         />
       </div>
     </motion.div>

@@ -19,8 +19,14 @@ const itemVariants = {
   visible: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 50 } },
 };
 
-export default function QuoteCardList({ visible }: { visible: boolean }) {
-  const { quotes, loading } = useQuotes(visible);
+export default function QuoteCardList({
+  visible,
+  search,
+}: {
+  visible: boolean;
+  search: string;
+}) {
+  const { quotes, loading } = useQuotes(visible, search);
 
   return (
     <AnimatePresence>
