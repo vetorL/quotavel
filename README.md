@@ -25,3 +25,9 @@ pnpm dev
 ```
 
 Abra [http://localhost:3000](http://localhost:3000) com seu navegador para ver o resultado.
+
+## Relatório do uso da IAG
+
+- [ChatGPT] Geração de componentes visuais.
+- [ChatGPT] Animação de componentes visuais.
+- [ChatGPT] Geração de scripts para modificação do dataset quotes.csv
