@@ -14,6 +14,8 @@ Projeto realizado para a disciplina de _Banco de Dados II_.
 
 [quotes.csv](https://www.kaggle.com/datasets/manann/quotes-500k)
 
+> Nota: o arquivo `quotes.csv` utilizado é uma versão modificada, sem a coluna "category".
+
 ## Instruções
 
 Para rodar o servidor de desenvolvimento:
