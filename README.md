@@ -30,6 +30,12 @@ Abra [http://localhost:3000](http://localhost:3000) com seu navegador para ver o
 
 ## Prisma
 
+### Popular o banco de dados
+
+```bash
+npx prisma db seed
+```
+
 ### Reset do banco de dados
 
 ```bash
