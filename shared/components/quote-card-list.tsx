@@ -1,6 +1,7 @@
 "use client";
 
-import { Quote } from "@/shared/type/quote";
+import { fetchQuotes } from "@/shared/api/fetch-quotes";
+import { Quote } from "@/shared/types/quote";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import QuoteCard from "./quote-card";
@@ -27,19 +28,18 @@ export default function QuoteCardList({ visible }: { visible: boolean }) {
   useEffect(() => {
     if (!visible) return;
 
-    const fetchQuotes = async () => {
+    const loadQuotes = async () => {
       try {
-        const res = await fetch("/api/quotes");
-        const data = await res.json();
+        const data = await fetchQuotes();
         setQuotes(data);
       } catch (error) {
-        console.error("Failed to fetch quotes:", error);
+        console.error(error);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchQuotes();
+    loadQuotes();
   }, [visible]);
 
   return (
