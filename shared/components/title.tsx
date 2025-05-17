@@ -18,7 +18,7 @@ export default function Title({ onFinished }: TitleProps) {
 
   return (
     <motion.h1
-      className="text-9xl font-bold italic absolute"
+      className="text-9xl font-bold italic absolute text-black"
       initial={{ top: "50%", left: "50%", x: "-50%", y: "-50%", scale: 1 }}
       animate={{
         top: finished ? "2rem" : "50%",
