@@ -53,3 +53,4 @@ npx prisma db push --force-reset
 - [ChatGPT] Geração de componentes visuais.
 - [ChatGPT] Animação de componentes visuais.
 - [ChatGPT] Geração de scripts para modificação do dataset quotes.csv
+- [ChatGPT] Ajuda no setup do Docker
