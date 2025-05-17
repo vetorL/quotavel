@@ -5,7 +5,7 @@ import { prisma } from "../shared/lib/prisma"; // adjust path if needed
 async function main() {
   const quotes: { quote: string; author: string }[] = [];
 
-  const parser = createReadStream("quotes.csv").pipe(
+  const parser = createReadStream("quotes_sample.csv").pipe(
     parse({
       columns: true,
       trim: true,
