@@ -26,6 +26,12 @@ npm run dev
 pnpm dev
 ```
 
+### Docker
+
+```bash
+sudo docker compose up -d
+```
+
 Abra [http://localhost:3000](http://localhost:3000) com seu navegador para ver o resultado.
 
 ## Prisma
