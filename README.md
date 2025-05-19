@@ -4,6 +4,8 @@ Aplicação Web para compartilhamento e visualização de citações.
 
 Projeto realizado para a disciplina de _Banco de Dados II_.
 
+[Slides da apresentação 1](https://docs.google.com/presentation/d/1eOVgi8jZyIJD3BXMyyp7VRu8vI1hIh-jL0IsizUgYHk/edit?usp=sharing)
+
 ## Integrantes do grupo
 
 - Karen Miyuki Massuda (14585868)
