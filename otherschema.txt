@@ -1,0 +1,67 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Quote {
+  id           Int                     @id @default(autoincrement())
+  authorId     Int
+  author       Author                  @relation(fields: [authorId], references: [id])
+  translations QuoteTranslation[]
+  stars        QuoteStar[]
+  tags         QuoteTag[]
+  tsv          Unsupported("tsvector") // usado para full text search
+}
+
+model Author {
+  id     Int     @id @default(autoincrement())
+  name   String  @unique
+  quotes Quote[]
+}
+
+model QuoteTranslation {
+  id       Int    @id @default(autoincrement())
+  quote    String
+  language String
+  quoteId  Int
+  Quote    Quote  @relation(fields: [quoteId], references: [id])
+
+  @@unique([quoteId, language])
+}
+
+model QuoteStar {
+  userId  Int
+  quoteId Int
+
+  User  User  @relation(fields: [userId], references: [id])
+  Quote Quote @relation(fields: [quoteId], references: [id])
+
+  @@id([userId, quoteId]) // garante que um user só possa "estrelar" uma vez
+}
+
+model User {
+  id    Int         @id @default(autoincrement())
+  name  String
+  email String      @unique
+  stars QuoteStar[]
+}
+
+model Tag {
+  id     Int        @id @default(autoincrement())
+  name   String     @unique
+  quotes QuoteTag[]
+}
+
+model QuoteTag {
+  quoteId Int
+  tagId   Int
+
+  Quote Quote @relation(fields: [quoteId], references: [id])
+  Tag   Tag   @relation(fields: [tagId], references: [id])
+
+  @@id([quoteId, tagId])
+}
